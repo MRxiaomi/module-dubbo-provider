@@ -1,5 +1,5 @@
 # 版本信息
-FROM tomcat:8-jdk11-openjdk-slim
+FROM tomcat:8.5-jdk8-openjdk
 MAINTAINER liuyumeng <liuyumeng@tinman.cn>
 # 工作目录
 #WORKDIR /var/
@@ -13,7 +13,7 @@ COPY target/dubbo-provider-*-SNAPSHOT.war /usr/local/tomcat/webapps/demo.war
 # 设置环境变量
 #ENV JAVA_HOME /var/jdk1.8.0_191
 #ENV PATH $PATH:$JAVA_HOME/bin:$CATALINA_HOME/bin
-#ENV TIME_ZONE Asia/Shanghai
+ENV TIME_ZONE Asia/Shanghai
 
 # 更改时区
 RUN set -x \
