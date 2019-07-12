@@ -22,6 +22,7 @@ RUN set -x \
 
 # 开启内部服务端口
 EXPOSE 20880
+EXPOSE 8080
 
 # 启动tomcat服务器 并输出日志
 CMD ["catalina.sh", "run"]
