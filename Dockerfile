@@ -16,9 +16,9 @@ COPY target/dubbo-provider-*-SNAPSHOT.war /usr/local/tomcat/webapps/demo.war
 #ENV TIME_ZONE Asia/Shanghai
 
 # 更改时区
-#RUN set -x \
-#&& echo "${TIME_ZONE}" > /etc/timezone \
-#&& ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
+RUN set -x \
+&& echo "${TIME_ZONE}" > /etc/timezone \
+&& ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
 
 # 开启内部服务端口
 EXPOSE 20880
